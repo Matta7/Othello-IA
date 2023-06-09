@@ -1,0 +1,11 @@
+function openGame(liste, texte, pos) {
+    if (pos === undefined) { pos = 1; }
+    if (pos < 1)  { pos = 1; }
+    if (pos > 61) { pos = 61; }
+    if (texte === undefined) { texte = ""; }
+    if (liste === undefined) { liste = ""; }
+    var win = window.open("/game.php?liste=" + liste + "&texte=" + texte + "&start_move=" + pos,
+        "game","top=30,left=5,width=332,height=485,toolbar=0,location=0,directories=0,menubar=0,scrollbars=0,status=0,resizable=1");
+    win.focus();
+    return false;
+}
